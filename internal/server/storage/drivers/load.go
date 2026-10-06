@@ -11,6 +11,7 @@ var drivers = map[string]func() driver{
 	"cephfs":     func() driver { return &cephfs{} },
 	"cephobject": func() driver { return &cephobject{} },
 	"dir":        func() driver { return &dir{} },
+	"dm-qcow2":   func() driver { return &dmQcow2{} },
 	"lvm":        func() driver { return &lvm{} },
 	"lvmcluster": func() driver { return &lvm{clustered: true} },
 	"truenas":    func() driver { return &truenas{} },
